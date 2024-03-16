@@ -2,7 +2,7 @@ class StrinCalculator
     def self.add(numbers)
         return 0 if numbers.empty?
         
-        delimiter = ","
+        delimiter = /[, \n]/
         if numbers.start_with?("//")
             delimiter, numbers = numbers.match(/^\/\/(.+)\n(.+)/).captures
         end
